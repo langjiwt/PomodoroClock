@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Clock by Chris</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="app">
+    <h1>Pomodoro Clock</h1>
+    <div class="panel">
+        <div class="panel-break">
+            <div class="break block">
+                <div class="block-title">Break Length</div>
+                <div class="block-content">
+                    <button v-on:click="decreaseBreakTime" class="decrease">-</button>
+                    <span class="preset-time">{{breakTime}}</span>
+                    <button v-on:click="increaseBreakTime" class="increase">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel-session">
+            <div class="session block">
+                <div class="block-title">Session Length</div>
+                <div class="block-content">
+                    <button v-on:click="decreaseSessionTime" class="decrease">-</button>
+                    <span class="preset-time">{{sessionTime}}</span>
+                    <button v-on:click="increaseSessionTime" class="increase">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="timer-wrapper">
+        <div class="timer">
+            <h2 class="timer-title">{{timerTitle}}</h2>
+            <div class="timer-screen">{{time}}</div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
