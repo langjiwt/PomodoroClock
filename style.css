@@ -31,7 +31,9 @@ h1 {}
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    margin: 20px auto;
+    z-index: 10;
+    position: absolute;
+    cursor: default;
 }
 
 .panel:after {
@@ -62,3 +64,32 @@ h1 {}
 }
 
 .block-title {}
+.timer-wrapper{
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.bg-session,.bg-break,.bg-cover{
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.bg-session{
+    background: #61c500;
+}
+.bg-break{
+    background: #ffc404;
+}
+.bg-cover{
+    background: #5a5a5a;
+    width: 300px;
+    height: 300px;
+    top: 2px;
+    left: 2px;
+    border-radius: inherit;
+}

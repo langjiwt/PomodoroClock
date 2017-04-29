@@ -33,10 +33,13 @@
         </div>
     </div>
     <div class="timer-wrapper">
-        <div class="timer">
-            <h2 class="timer-title">{{timerTitle}}</h2>
+        <div v-on:click="runOrStop" class="timer">
+            <h2 class="timer-title">{{isSession?sessionTitle:breakTitle}}</h2>
             <div class="timer-screen">{{time}}</div>
         </div>
+        <div v-if="isSession" class="bg-session"></div>
+        <div v-if="!isSession" class="bg-break"></div>
+        <div ref="cover" class="bg-cover"></div>
     </div>
 </div>
 <script src="app.js"></script>
