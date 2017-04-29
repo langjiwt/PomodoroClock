@@ -66,7 +66,7 @@ var app = new Vue({
                 if(self.actualTime > 0){
                     self.actualTime--;
                     console.log(self.actualTime+"|"+self.totalTime);
-                    self.$refs.cover.style.height = 300*self.actualTime/self.totalTime+"px";
+                    self.$refs.cover.style.height = 290*self.actualTime/self.totalTime+"px";
                 }
                 else{
                     if(self.isSession){
